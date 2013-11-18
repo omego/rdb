@@ -33,7 +33,7 @@
                   <input type="text" value="" placeholder="Username" name="username" class="span3">
                 </div>
                 
-                <p><input type="submit" value=""></p>
+                <button class="btn btn-primary btn-wide">Add</button>
             </form>
             
       </div>
