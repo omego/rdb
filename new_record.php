@@ -25,6 +25,14 @@
                   <input type="text" value="" placeholder="Username" name="username" class="span3">
                 </div>
                 
+                <div class="control-group large">
+                  <input type="text" value="" placeholder="Username" name="username" class="span3">
+                </div>
+                
+                <div class="control-group large">
+                  <input type="text" value="" placeholder="Username" name="username" class="span3">
+                </div>
+                
                 <p><input type="submit" value=""></p>
             </form>
             
