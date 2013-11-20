@@ -2,7 +2,7 @@
 
     <div class="container">
       <div class="box">
-        test
+        <?php include 'show.php'; ?>
       </div>
     </div>
     <!-- /.container -->
