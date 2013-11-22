@@ -32,38 +32,18 @@ session_start();
 	  if(isset($_SESSION['username']))
 	  {
 		  // Logged in
-		  echo '<div style="text-align:center;">You are logged in as '. $_SESSION['username']. ', click here to <a href="logout.php">logout</a></div>';
+		  echo "<div class='header-push'>";
+		  echo '<div style="float:left;text-align:center;">Hi '. $_SESSION['username']. ', You are awesome today ;) <a href="logout.php">logout</a></div>';
 ?>
-<div class="header-push">
- <div class="container">
- <div class="navbar">
-   <div class="navbar-inner">
- 	<div class="container">
-
- 	  <a href="index.php" class="brand fui-flat"></a>
-
+  
  
- 		<form class="navbar-search form-search pull-right" action="">
- 		  <div class="input-append">
- 			<input type="text" class="search-query span2" placeholder="Search">
- 			<button type="submit" class="btn btn-large">
- 			  <i class="fui-search"></i>
- 			</button>
- 		  </div>
- 		</form>
- 	  </div><!--/.nav-collapse -->
- 	</div>
+ <a href="new_record.php" class="btn btn-large btn-block btn-primary col-3-med">Add New</a>
+ </div>
+  	</div>
    </div>
    
 
-   
- </div> <!-- /navbar -->          </div>
  
- <div class="col-3-med">
-  
- 
- <a href="new_record.php" class="btn btn-large btn-block btn-primary">Add New</a>
- </div>
 
 <?
 	  }

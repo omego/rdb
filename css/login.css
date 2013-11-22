@@ -1,5 +1,9 @@
 body {
-	background: url('../images/2560x1600.jpg');
+	background-color: #333333;
+	background-image: url("../images/nesspresso.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .login-col {
 	width: 270px;

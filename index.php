@@ -2,7 +2,10 @@
 
     <div class="container">
       <div class="box">
-        <?php include 'show.php'; ?>
+        <div class="logo">
+          <a href="index.php"><img src="../rdb/images/logo.png"></a>  
+        </div>
+        <?php include 'searchform.php'; ?>
       </div>
     </div>
     <!-- /.container -->
