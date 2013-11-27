@@ -925,7 +925,7 @@ a.muted:focus {
 .btn:hover,
 .btn:focus,
 .btn-group:focus .btn.dropdown-toggle {
-  background-color: #cacfd2;
+  background-color: #FF6964;
   color: #ffffff;
   outline: none;
   -webkit-transition: 0.25s;
@@ -937,7 +937,7 @@ a.muted:focus {
 .btn:active,
 .btn-group.open .btn.dropdown-toggle,
 .btn.active {
-  background-color: #a1a6a9;
+  background-color: #A34340;
   color: rgba(255, 255, 255, 0.75);
   -webkit-box-shadow: none;
   -moz-box-shadow: none;

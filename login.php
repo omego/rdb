@@ -26,7 +26,9 @@
     <div class="container">
         
       <div class="login-col">
-          
+         <div class="logo">
+            <a href="index.php"><img src="../rdb/images/logo.png"></a>  
+          </div> 
       <form action="login-process.php" method="post">
           
       <div class="control-group large">

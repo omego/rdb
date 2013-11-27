@@ -16,6 +16,7 @@ session_start();
 	<!-- Loading Flat UI -->
 	<link href="css/flat-ui.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	<link href="css/search.css" rel="stylesheet">
 
 	<link rel="shortcut icon" href="images/favicon.ico">
 
@@ -33,7 +34,7 @@ session_start();
 	  {
 		  // Logged in
 		  echo "<div class='header-push'>";
-		  echo '<div style="float:left;text-align:center;">Hi '. $_SESSION['username']. ', You are awesome today ;) <a href="logout.php">logout</a></div>';
+		  echo '<div style="float:left;text-align:center;"><p><span class="fui-gear"></span> Hi <strong>'. $_SESSION['username']. '</strong>, You are awesome today ;) <a href="logout.php">logout</a></p></div>';
 ?>
   
  

@@ -1,59 +1,110 @@
 <?php
-include 'header.php'; 
-include 'connect.php';
-?>
+/************************************************
+	The Search PHP File
+************************************************/
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<title>Search results</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" type="text/css" href="style.css"/>
-</head>
-<body>
-<?php
-	$query = $_GET['query'];
-	// gets value sent over search form
 
-	$min_length = 3;
-	// you can set minimum length of the query if you want
+/************************************************
+	MySQL Connect
+************************************************/
 
-	if(strlen($query) >= $min_length){ // if query length is more or equal minimum length then
+// Credentials
+$dbhost = "localhost";
+$dbname = "RDB";
+$dbuser = "root";
+$dbpass = "root";
 
-		$query = htmlspecialchars($query);
-		// changes characters used in html to their equivalents, for example: < to &gt;
+//	Connection
+global $tutorial_db;
 
-		$query = mysql_real_escape_string($query);
-		// makes sure nobody uses SQL injection
+$tutorial_db = new mysqli();
+$tutorial_db->connect($dbhost, $dbuser, $dbpass, $dbname);
+$tutorial_db->set_charset("utf8");
 
-		$raw_results = mysql_query("SELECT * FROM entry
-			WHERE (`First_Name` LIKE '%".$query."%') OR (`Cnum` LIKE '%".$query."%')") or die(mysql_error());
+//	Check Connection
+if ($tutorial_db->connect_errno) {
+	printf("Connect failed: %s\n", $tutorial_db->connect_error);
+	exit();
+}
 
-		// * means that it selects all fields, you can also write: `id`, `title`, `text`
-		// articles is the name of our table
+/************************************************
+	Search Functionality
+************************************************/
 
-		// '%$query%' is what we're looking for, % means anything, for example if $query is Hello
-		// it will match "hello", "Hello man", "gogohello", if you want exact match use `title`='$query'
-		// or if you want to match just full word so "gogohello" is out use '% $query %' ...OR ... '$query %' ... OR ... '% $query'
+// Define Output HTML Formating
+$html = '';
+$html .= '<li class="result">';
+$html .= '<a target="_blank" href="urlString">';
+$html .= '<h3>nameString</h3>';
+$html .= '<h4>functionString</h4>';
+$html .= '</a>';
+$html .= '</li>';
 
-		if(mysql_num_rows($raw_results) > 0){ // if one or more rows are returned do following
+// Get Search
+$search_string = preg_replace("/[^A-Za-z0-9]/", " ", $_POST['query']);
+$search_string = $tutorial_db->real_escape_string($search_string);
 
-			while($results = mysql_fetch_array($raw_results)){
-			// $results = mysql_fetch_array($raw_results) puts data from database into array, while it's valid it does the loop
+// Check Length More Than One Character
+if (strlen($search_string) >= 1 && $search_string !== ' ') {
+	// Build Query
+	$query = 'SELECT * FROM entry WHERE Saudi_ID LIKE "%'.$search_string.'%" OR Cnum LIKE "%'.$search_string.'%"';
 
-				echo "<p><h3>".$results['First_Name']."</h3>".$results['Cnum']."</p>";
-				// posts results gotten from database(title and text) you can also show id ($results['id'])
-			}
-
-		}
-		else{ // if there is no matching rows do following
-			echo "No results";
-		}
-
+	// Do Search
+	$result = $tutorial_db->query($query);
+	while($results = $result->fetch_array()) {
+		$result_array[] = $results;
 	}
-	else{ // if query length is less than minimum
-		echo "Minimum length is ".$min_length;
+
+	// Check If We Have Results
+	if (isset($result_array)) {
+		foreach ($result_array as $result) {
+
+			// Format Output Strings And Hightlight Matches
+			$display_function = preg_replace("/".$search_string."/i", "<b class='highlight'>".$search_string."</b>", $result['Saudi_ID']);
+			$display_name = preg_replace("/".$search_string."/i", "<b class='highlight'>".$search_string."</b>", $result['Cnum']);
+			$display_url = 'view.php?id=' . $result['id'] . '';
+
+			// Insert Name
+			$output = str_replace('nameString', $display_name, $html);
+
+			// Insert Function
+			$output = str_replace('functionString', $display_function, $output);
+
+			// Insert URL
+			$output = str_replace('urlString', $display_url, $output);
+
+			// Output
+			echo($output);
+		}
+	}else{
+
+		// Format No Results Output
+		$output = str_replace('urlString', 'javascript:void(0);', $html);
+		$output = str_replace('nameString', '<b>No Results Found.</b>', $output);
+		$output = str_replace('functionString', 'Sorry :(', $output);
+
+		// Output
+		echo($output);
 	}
+}
+
+
+/*
+// Build Function List (Insert All Functions Into DB - From PHP)
+
+// Compile Functions Array
+$functions = get_defined_functions();
+$functions = $functions['internal'];
+
+// Loop, Format and Insert
+foreach ($functions as $function) {
+	$function_name = str_replace("_", " ", $function);
+	$function_name = ucwords($function_name);
+
+	$query = '';
+	$query = 'INSERT INTO search SET id = "", function = "'.$function.'", name = "'.$function_name.'"';
+
+	$tutorial_db->query($query);
+}
+*/
 ?>
-</body>
-</html>
