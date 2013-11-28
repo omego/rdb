@@ -208,7 +208,7 @@ div.icon:hover {
 	background-position: 0px -30px;
 	cursor: pointer;
 }
-input#search {
+input#search-id {
 	width: 450px;
 	height: 25px;
 
@@ -223,19 +223,19 @@ input#search {
 	line-height: 25px;
 	color: #ababab;
 }
-input#search:hover{
+input#search-id:hover{
 	color: #3b3b3b;
 	border: 2px solid #FF6964;
 
 }
-input#search:focus{
+input#search-id:focus{
 	color: #3b3b3b;
 	border: 2px solid #D04642;
 }
-h4#results-text {
+h4#results-text-id {
 	display: none;
 }
-ul#results {
+ul#results-id {
 	display: none;
 	width: 450px;
 	margin-top: 4px;
@@ -248,7 +248,7 @@ ul#results {
 	box-shadow: rgba(0, 0, 0, .15) 0 1px 3px;
 	margin-bottom: 15px;
 }
-ul#results li {
+ul#results-id li {
 	padding: 8px;
 	cursor: pointer;
 	border-top: 1px solid #cdcdcd;
@@ -257,20 +257,20 @@ ul#results li {
 	-webkit-transition: background-color .3s ease-in-out;
 	background-color: #F7F7F7;
 }
-ul#results li:hover {
+ul#results-id li:hover {
 	background-color: #E3DDD9;
 }
-ul#results li:first-child {
+ul#results-id li:first-child {
 	border-top: none;
 }
-ul#results li h3, ul#results li h4 {
+ul#results-id li h3, ul#results-id li h4 {
 	transition: color .3s ease-in-out;
 	-moz-transition: color .3s ease-in-out;
 	-webkit-transition: color .3s ease-in-out;
 	color: #616161;
 	line-height: 1.2em;
 }
-ul#results li:hover h3, ul#results li:hover h4  {
+ul#results-id li:hover h3, ul#results-id li:hover h4  {
 	color: #3b3b3b;
 	font-weight: bold;
 }

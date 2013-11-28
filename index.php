@@ -7,13 +7,7 @@
                <a href="index.php"><img src="../rdb/images/logo.png"></a>  
              </div>
              
-          <ul class="nav nav-tabs nav-append-content">
-            <li class="active"><a href="#tab1">All</a></li>
-            <li><a href="#tab2">ID</a></li>
-            <li><a href="#tab3">C#</a></li>
-            <li><a href="#tab3">Family</a></li>
-            <li><a href="#tab3">More</a></li>
-          </ul> <!-- /tabs -->
+
           
           <div class="tab-content">
             <div class="tab-pane active" id="tab1">
@@ -22,7 +16,7 @@
           
             <!-- /tabs -->
             <div class="tab-pane" id="tab2">
-              <? include 'search.html';?>
+              <? include 'search-id.html';?>
             </div>
           
             <!-- /tabs -->
@@ -37,7 +31,16 @@
             
           </div> <!-- /tab-content -->
              
+             <ul class="nav nav-tabs nav-append-content">
+               <li class="active"><a href="#tab1">All</a></li>
+               <li><a href="#tab2">ID</a></li>
+               <li><a href="#tab3">C#</a></li>
+               <li><a href="#tab3">Family</a></li>
+               <li><a style="margin-left:90px;" href="#tab4">More</a></li>
+             </ul> <!-- /tabs -->
            </div>
+           
+           
          </div>
         <!-- /.container -->
 

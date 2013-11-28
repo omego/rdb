@@ -17,6 +17,7 @@ session_start();
 	<link href="css/flat-ui.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/search.css" rel="stylesheet">
+	<link href="css/search-id.css" rel="stylesheet">
 
 	<link rel="shortcut icon" href="images/favicon.ico">
 
