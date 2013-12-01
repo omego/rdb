@@ -1,0 +1,11 @@
+# protect connect.php
+
+<files connect.php>
+order allow,deny
+deny from all
+</files>
+
+# disable directory browsing
+# For security reasons, Option all cannot be overridden.
+#Options All -Indexes
+Options ExecCGI Includes IncludesNOEXEC SymLinksIfOwnerMatch -Indexes

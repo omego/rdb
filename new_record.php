@@ -58,6 +58,7 @@
                     <option value="1">Diploma</option>
                     <option value="1">Bachelor</option>
                     <option value="1">Master</option>
+                    <option value="1">PhD</option>
                   </optgroup>
                 </select>
                 
@@ -86,9 +87,9 @@
                 
                 <select name="Status" class="select-block mbl">
                   <optgroup label="Status">
-                    <option value="0">Approved</option>
+                    <option value="0">Under Process</option>
+                    <option value="1">Approved</option>
                     <option value="1">Disapproved</option>
-                    <option value="1">Under Process</option>
                   </optgroup>
                 </select>
                 

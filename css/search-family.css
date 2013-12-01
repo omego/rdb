@@ -208,7 +208,7 @@ div.icon:hover {
 	background-position: 0px -30px;
 	cursor: pointer;
 }
-input#search-id {
+input#search-family {
 	width: 450px;
 	height: 25px;
 margin-left: 21px;
@@ -223,19 +223,19 @@ margin-left: 21px;
 	line-height: 25px;
 	color: #ababab;
 }
-input#search-id:hover{
+input#search-family:hover{
 	color: #3b3b3b;
 	border: 2px solid #FF6964;
 
 }
-input#search-id:focus{
+input#search-family:focus{
 	color: #3b3b3b;
 	border: 2px solid #D04642;
 }
-h4#results-text-id {
+h4#results-text-family {
 	display: none;
 }
-ul#results-id {
+ul#results-family {
 	display: none;
 	width: 450px;
 	margin-top: 4px;
@@ -249,7 +249,7 @@ ul#results-id {
 	margin-bottom: 15px;
 	margin-left: 21px;
 }
-ul#results-id li {
+ul#results-family li {
 	padding: 8px;
 	cursor: pointer;
 	border-top: 1px solid #cdcdcd;
@@ -258,20 +258,20 @@ ul#results-id li {
 	-webkit-transition: background-color .3s ease-in-out;
 	background-color: #F7F7F7;
 }
-ul#results-id li:hover {
+ul#results-family li:hover {
 	background-color: #E3DDD9;
 }
-ul#results-id li:first-child {
+ul#results-family li:first-child {
 	border-top: none;
 }
-ul#results-id li h3, ul#results-id li h4 {
+ul#results-family li h3, ul#results-family li h4 {
 	transition: color .3s ease-in-out;
 	-moz-transition: color .3s ease-in-out;
 	-webkit-transition: color .3s ease-in-out;
 	color: #616161;
 	line-height: 1.2em;
 }
-ul#results-id li:hover h3, ul#results-id li:hover h4  {
+ul#results-family li:hover h3, ul#results-family li:hover h4  {
 	color: #3b3b3b;
 	font-weight: bold;
 }

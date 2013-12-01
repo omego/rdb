@@ -47,7 +47,7 @@ $search_string = $tutorial_db->real_escape_string($search_string);
 // Check Length More Than One Character
 if (strlen($search_string) >= 1 && $search_string !== ' ') {
 	// Build Query
-	$query = 'SELECT * FROM entry WHERE Saudi_ID LIKE "%'.$search_string.'%"';
+	$query = 'SELECT * FROM entry WHERE Sure_Name LIKE "%'.$search_string.'%"';
 
 	// Do Search
 	$result = $tutorial_db->query($query);
@@ -60,8 +60,8 @@ if (strlen($search_string) >= 1 && $search_string !== ' ') {
 		foreach ($result_array as $result) {
 
 			// Format Output Strings And Hightlight Matches
-			$display_function = preg_replace("/".$search_string."/i", "<b class='highlight'>".$search_string."</b>", $result['Saudi_ID']);
-			$display_name = preg_replace("/".$search_string."/i", "<b class='highlight'>".$search_string."</b>", $result['First_Name']." ".$result['Sure_Name']);
+			$display_function = preg_replace("/".$search_string."/i", "<b class='highlight'>".$search_string."</b>", $result['First_Name']);
+			$display_name = preg_replace("/".$search_string."/i", "<b class='highlight'>".$search_string."</b>", $result['Sure_Name']);
 			$display_url = 'view.php?id=' . $result['id'] . '';
 
 			// Insert Name

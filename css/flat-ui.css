@@ -971,7 +971,6 @@ a.muted:focus {
   /* 17px */
 
   line-height: 20px;
-  padding: 12px 18px 13px;
 }
 .btn.btn-large > [class^="fui-"] {
   top: 0;
@@ -1011,6 +1010,11 @@ a.muted:focus {
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.15);
 }
 .btn.btn-wide {
+  min-width: 190px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.btn.btn-login {
   min-width: 270px;
   padding-left: 30px;
   padding-right: 30px;
@@ -3344,7 +3348,7 @@ input.search-query {
 }
 .checkbox.checked,
 .radio.checked {
-  color: #16a085;
+  color: #DD5C56;
 }
 .checkbox.checked .icons,
 .radio.checked .icons {
@@ -5329,6 +5333,7 @@ input.search-query {
 .nav-tabs.nav-append-content {
   border-bottom: none;
   margin-bottom: 0;
+  margin-left: 21px;
 }
 .nav-tabs.nav-append-content > li.active:first-child:before {
 

@@ -5,7 +5,7 @@ body {
 	margin: 10px;
 }
 .col-3-med{
-	width: 270px;
+	width: 190px;
 	float: right;
 }
 .box {
@@ -14,6 +14,10 @@ body {
 	  font-size: 16px;
 	  width: 492px;
 
+}
+.llogo {
+	margin: 0 auto 7px;
+	width: 214px;
 }
 .logo {
 	margin: 0 auto 25px;

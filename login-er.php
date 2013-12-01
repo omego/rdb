@@ -27,14 +27,16 @@
     <div class="container">
         
       <div class="login-col">
-          
+         <div class="llogo">
+            <a href="index.php"><img src="../rdb/images/bd.png"></a>  
+          </div> 
       <form action="login-process.php" method="post">
           
       <div class="control-group error large">
         <input type="text" value="" placeholder="Username" name="username" class="span3">
       </div>
       <div class="control-group error large">
-        <input type="text" value="" placeholder="Password" name="password" class="span3">
+        <input type="password" value="" placeholder="Password" name="password" class="span3">
       </div>
       <button class="btn btn-primary btn-wide">Login</button>
       

@@ -214,11 +214,12 @@ input#search {
 
 
 	margin-bottom: 15px;
+	margin-left: 21px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
 	outline: none;
-	border: 2px solid #D04642;
+	border: 2px solid #fff;
 	font-size: 20px;
 	line-height: 25px;
 	color: #ababab;
@@ -239,6 +240,7 @@ ul#results {
 	display: none;
 	width: 450px;
 	margin-top: 4px;
+	margin-left: 1px;
 	border: 1px solid #ababab;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
