@@ -1,30 +1,32 @@
 <?php include 'header.php'; ?>
 
     <div class="container">
-      <div class="box">
+      <div class="box-add">
             <? $form_date = date("d F, y"); ?>
             
-            <form action="insert_record.php" method="post">
+            <form action="insert_record.php" enctype="multipart/form-data" method="post">
+
+                <label for="file">File:</label>
+                <input type="file" name="file" id="file"><br>
+
                 
                 <div class="control-group large">
-                  <input type="text" value="" placeholder="First Name" name="First_Name" class="span2"> 
-                </div>
-                
-                <div class="control-group large">
+                  <input type="text" value="" placeholder="First Name" name="First_Name" class="span2">
+                  
                   <input type="text" value="" placeholder="Father Name" name="Father_Name" class="span2">
-                </div>
-                
-                <div class="control-group large">
+                  
                   <input type="text" value="" placeholder="Sure Name" name="Sure_Name" class="span2">
+                  
                 </div>
                 
-                <div class="control-group large">
-                  <input type="text" value="" placeholder="Saudi ID/Iqama" name="Saudi_ID" class="span3">
-                </div>
                 
                 <div class="control-group large">
-                  <input type="text" value="" placeholder="C#" name="Cnum" class="span3">
+                  <input type="text" value="" placeholder="Saudi ID/Iqama" name="Saudi_ID" class="span2">
+                  
+                  <input type="text" value="" placeholder="C#" name="Cnum" class="span2">
                 </div>
+                
+
                 
                 <label class="radio">
                   <input type="radio" name="Gender" id="optionsRadios1" value="Male" data-toggle="radio" checked="">
