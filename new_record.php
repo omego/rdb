@@ -21,9 +21,11 @@
                 
                 
                 <div class="control-group large">
-                  <input type="text" value="" placeholder="Saudi ID/Iqama" name="Saudi_ID" class="span2">
+                  <input type="text" value="" placeholder="Saudi ID/Iqama" name="Saudi_ID" class="span3">
                   
-                  <input type="text" value="" placeholder="C#" name="Cnum" class="span2">
+                  <input type="text" value="" placeholder="C#" name="Cnum" class="span3">
+                  
+                  
                 </div>
                 
 
@@ -38,23 +40,45 @@
                   Female
                 </label>
                 
-                <div class="control-group large">
-                  <input type="text" value="" placeholder="Mobile NO." name="Mobile" class="span3">
-                </div>
+                
                 
                 <div class="control-group large">
-                  <input type="text" value="" placeholder="EPT Score" name="EPT" class="span3">
-                </div>
-                
-                <div class="control-group">
+                  
                   <div class="input-prepend input-datepicker">
                     <button type="button" class="btn"><span class="fui-calendar"></span></button>
                     <input type="text" name="EPT_Date" class="span2" value="<? echo $form_date; ?>" id="datepicker-01">
                   </div>
+                  
+                  <input type="text" value="" placeholder="Mobile NO." name="Mobile" class="span3">
+
+                </div>
+                
+                <div class="control-group large">
+                 <div class="input-prepend input-datepicker">
+                   <button type="button" class="btn large"><span class="fui-calendar"></span></button>
+                   <input type="text" name="EPT_Date" class="span2" value="<? echo $form_date; ?>" id="datepicker-01">
+                 </div>
+                 
+                  <input type="text" value="" placeholder="EPT Score" name="EPT" class="span3">
+
+
                 </div>
                     
-                    
-                <select name="Qualifications" class="select-block mbl">
+
+                
+                <div class="control-group large">
+      
+                  <input type="text" value="" placeholder="Specialty" name="Specialty" class="span3">
+                
+                <input type="text" name="Experience" id="spinner-01" placeholder="Years of Experience" value="0" class="spinner">
+                
+
+              </div>
+                
+                
+                <div class="control-group large">
+                
+                <select name="Qualifications" class="select-form span3">
                   <optgroup label="Qualifications">
                     <option value="0">High School</option>
                     <option value="1">Diploma</option>
@@ -64,37 +88,32 @@
                   </optgroup>
                 </select>
                 
-                <div class="control-group large">
-                  <input type="text" value="" placeholder="Specialty" name="Specialty" class="span3">
+                <input type="text" value="" placeholder="GPA" name="GPA" class="span3">
+
                 </div>
                 
-                <select name="Category" class="select-block mbl">
-                  <optgroup label="Category">
-                    <option value="0">Administrative</option>
-                    <option value="1">Technical</option>
-                    <option value="1">IT</option>
-                    <option value="1">Academic</option>
-                  </optgroup>
-                </select>
-                
-                <div class="control-group large">
-                  <input type="text" value="" placeholder="GPA" name="GPA" class="span3">
-                </div>
-                
-                <div class="control-group">
-                  <input type="text" name="Experience" id="spinner-01" placeholder="Years of Experience" value="0" class="spinner">
-                </div>
 
 
-                
-                <select name="Status" class="select-block mbl">
+
+                <div class="control-group large">
+                  
+                  <select name="Category" class="select-form span3">
+                    <optgroup label="Category">
+                      <option value="0">Administrative</option>
+                      <option value="1">Technical</option>
+                      <option value="1">IT</option>
+                      <option value="1">Academic</option>
+                    </optgroup>
+                  </select>
+                  
+                <select name="Status" class="select-form span3">
                   <optgroup label="Status">
                     <option value="0">Under Process</option>
                     <option value="1">Approved</option>
                     <option value="1">Disapproved</option>
                   </optgroup>
                 </select>
-                
+              </div>
                 
                   <textarea rows="3" name="Comments" placeholder="Add comment..." class="span12"></textarea>
                

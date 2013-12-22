@@ -37,11 +37,11 @@ session_start();
 	  {
 		  // Logged in
 		  echo "<div class='header-push'>";
-		  echo '<div style="float:left;text-align:center;"><p><span class="fui-gear"></span> Hi <strong>'. $_SESSION['username']. '</strong>, You are awesome today ;) <a href="logout.php">logout</a></p></div>';
+		  echo '<div style="float:left;text-align:center;line-height: 0;"><p><span class="fui-gear"></span> Hi <strong>'. $_SESSION['username']. '</strong>, You are awesome today ;) <a href="logout.php">logout</a></p></div>';
 ?>
   
  
- <a href="new_record.php" class="btn btn-large btn-block btn-primary col-3-med">Add New</a>
+ <a href="new_record-2.php" class="btnx-primary col-3-med">Add New</a>
  </div>
   	</div>
    </div>
