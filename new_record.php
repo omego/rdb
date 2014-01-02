@@ -1,143 +1,156 @@
-<?php include 'header.php'; ?>
+<?php include 'header2.php'; ?>
 
-    <div class="container">
-      <div class="box-add">
-            <? $form_date = date("d F, y"); ?>
+
+      
+  <!-- formee-->
+  
+  <div class="container">
+  <div class="box-add">
+  
+  <form class="formee" action="insert_record.php" enctype="multipart/form-data" method="post" autocomplete="on">
+        
+         <div class="box-sec">
+             
+                 <div class="grid-5-12">
+                   <label>File Upload <em class="formee-req">*</em></label>
+                 <input type="file" value="" name="file">
+               </div>
+               
+               <div class="grid-7-12">
+                    <h3>Allowed Files type: ZIP, PDF & Any type of image - max size 10MB</h3>
+               </div>
+               
+        </div>
+        
+        <div class="box-sec">
             
-            <form action="insert_record.php" enctype="multipart/form-data" method="post">
+                  <div class="grid-4-12">
+                          <label>First Name <em class="formee-req">*</em></label>
+                         <input type="text" name="First_Name" value="" />
+                  </div>
+                  <div class="grid-4-12">
+                          <label>Father Name <em class="formee-req">*</em></label>
+                         <input type="text" name="Father_Name" value="" />
+                  </div>
+                  <div class="grid-4-12">
+                          <label>Sure Name <em class="formee-req">*</em></label>
+                         <input type="text" name="Sure_Name" value="" />
+                  </div>
 
-                <label for="file">File:</label>
-                <input type="file" name="file" id="file"><br>
-
-                
-                <div class="control-group large">
-                  <input type="text" value="" placeholder="First Name" name="First_Name" class="span2">
-                  
-                  <input type="text" value="" placeholder="Father Name" name="Father_Name" class="span2">
-                  
-                  <input type="text" value="" placeholder="Sure Name" name="Sure_Name" class="span2">
-                  
-                </div>
-                
-                
-                <div class="control-group large">
-                  <input type="text" value="" placeholder="Saudi ID/Iqama" name="Saudi_ID" class="span3">
-                  
-                  <input type="text" value="" placeholder="C#" name="Cnum" class="span3">
-                  
-                  
-                </div>
-                
-
-                
-                <label class="radio">
-                  <input type="radio" name="Gender" id="optionsRadios1" value="Male" data-toggle="radio" checked="">
-                  Male
-                </label>
-                
-                <label class="radio">
-                  <input type="radio" name="Gender" id="optionsRadios2" value="Female" data-toggle="radio">
-                  Female
-                </label>
-                
-                
-                
-                <div class="control-group large">
-                  
-                  <div class="input-prepend input-datepicker">
-                    <button type="button" class="btn"><span class="fui-calendar"></span></button>
-                    <input type="text" name="EPT_Date" class="span2" value="<? echo $form_date; ?>" id="datepicker-01">
+    
+                  <div class="grid-4-12">
+                          <label>Saudi ID/Iqama <em class="formee-req">*</em></label>
+                         <input type="text" name="Saudi_ID" value="" />
+                  </div>
+                  <div class="grid-4-12">
+                          <label>C Number <em class="formee-req">*</em></label>
+                         <input type="text" id="cnum" name="Cnum" value="" />
                   </div>
                   
-                  <input type="text" value="" placeholder="Mobile NO." name="Mobile" class="span3">
-
-                </div>
-                
-                <div class="control-group large">
-                 <div class="input-prepend input-datepicker">
-                   <button type="button" class="btn large"><span class="fui-calendar"></span></button>
-                   <input type="text" name="EPT_Date" class="span2" value="<? echo $form_date; ?>" id="datepicker-01">
-                 </div>
-                 
-                  <input type="text" value="" placeholder="EPT Score" name="EPT" class="span3">
-
-
-                </div>
-                    
-
-                
-                <div class="control-group large">
-      
-                  <input type="text" value="" placeholder="Specialty" name="Specialty" class="span3">
-                
-                <input type="text" name="Experience" id="spinner-01" placeholder="Years of Experience" value="0" class="spinner">
-                
-
-              </div>
-                
-                
-                <div class="control-group large">
-                
-                <select name="Qualifications" class="select-form span3">
-                  <optgroup label="Qualifications">
-                    <option value="0">High School</option>
-                    <option value="1">Diploma</option>
-                    <option value="1">Bachelor</option>
-                    <option value="1">Master</option>
-                    <option value="1">PhD</option>
-                  </optgroup>
-                </select>
-                
-                <input type="text" value="" placeholder="GPA" name="GPA" class="span3">
-
-                </div>
-                
-
-
-
-                <div class="control-group large">
+                  <div class="grid-4-12">
+                          <label>Gender <em class="formee-req">*</em></label>
+                          <ul class="formee-list">
+                              <li><input name="Gender" checked="checked" value="Male" type="radio" /><label>Male</label></li>
+                              <li><input name="Gender" value="Female" type="radio" /><label>Female</label></li>
+                          </ul>
+                  </div>
+ 
+                  <div class="grid-6-12">
+                          <label>Date of Birth <em class="formee-req">*</em></label>
+                         <input type="text" name="DOB" id="datepicker" value="" />
+                  </div>
                   
-                  <select name="Category" class="select-form span3">
-                    <optgroup label="Category">
-                      <option value="0">Administrative</option>
-                      <option value="1">Technical</option>
-                      <option value="1">IT</option>
-                      <option value="1">Academic</option>
-                    </optgroup>
+                  <div class="grid-6-12">
+                          <label>Mobile NO. <em class="formee-req">*</em></label>
+                         <input type="text" name="Mobile" value="" />
+                  </div>
+          </div>
+    
+    
+    
+          <div class="box-sec">
+              
+          <div class="grid-4-12">
+                  <label>Date of EPT <em class="formee-req">*</em></label>
+                 <input type="text" name="EPT_Date" id="datepicker-2" value="" />
+          </div>
+    
+          <div class="grid-2-12">
+                  <label>EPT Score <em class="formee-req">*</em></label>
+                 <input type="text" id="ept" name="EPT" value="" />
+          </div>
+        
+          <div class="grid-12-12">
+
+          </div>
+
+          <div class="grid-6-12">
+                  <label>Specialty <em class="formee-req">*</em></label>
+                 <input type="text" name="Specialty" value="" />
+          </div>
+    
+          <div class="grid-6-12">
+                  <label>Experience <em class="formee-req">*</em></label>
+                 <input type="text" name="Experience" value="" />
+          </div>
+    
+    
+          <div class="grid-4-12">
+                  <label>Qualifications</label>
+                  <select name="Qualifications">
+                      <option value="High School">High School</option>
+                      <option value="Diploma">Diploma</option>
+                      <option value="Bachelor">Bachelor</option>
+                      <option value="Master">Master</option>
+                      <option value="PhD">PhD</option>
                   </select>
-                  
-                <select name="Status" class="select-form span3">
-                  <optgroup label="Status">
-                    <option value="0">Under Process</option>
-                    <option value="1">Approved</option>
-                    <option value="1">Disapproved</option>
-                  </optgroup>
-                </select>
-              </div>
-                
-                  <textarea rows="3" name="Comments" placeholder="Add comment..." class="span12"></textarea>
-               
-                
-                <button class="btn btn-primary btn-wide">Add</button>
-            </form>
+          </div>
+    
+          <div class="grid-4-12">
+                  <label>GPA <em class="formee-req">*</em></label>
+                 <input type="text" name="GPA" value="" />
+          </div>
+    
+    
+          <div class="grid-6-12">
+                  <label>Category</label>
+                  <select name="Category">
+                      <option value="Administrative">Administrative</option>
+                      <option value="Technical">Technical</option>
+                      <option value="IT">IT</option>
+                      <option value="Academic">Academic</option>
+                  </select>
+          </div>
+    
+          <div class="grid-6-12">
+                  <label>Status</label>
+                  <select name="Status">
+                      <option value="Under Process">Under Process</option>
+                      <option value="Approved">Approved</option>
+                      <option value="Disapproved">Disapproved</option>
+                  </select>
+          </div>
+          
+          </div>
+          
+          <div class="box-sec">
             
-      </div>
-    </div>
-    <!-- /.container -->
-
-
-    <!-- Load JS here for greater good =============================-->
-    <script src="js/jquery-1.8.3.min.js"></script>
-    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
-    <script src="js/jquery.ui.touch-punch.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-select.js"></script>
-    <script src="js/bootstrap-switch.js"></script>
-    <script src="js/flatui-checkbox.js"></script>
-    <script src="js/flatui-radio.js"></script>
-    <script src="js/jquery.tagsinput.js"></script>
-    <script src="js/jquery.placeholder.js"></script>
-    <script src="js/jquery.stacktable.js"></script>
-    <script src="js/application.js"></script>
-  </body>
-</html>
+          
+          <div class="grid-12-12">
+                  <label>Comments <em class="formee-req">*</em></label>
+                 <textarea name="Comments" id="" placeholder="Add Comments ..." cols="30" rows="10"></textarea>
+          </div>
+        
+        </div>
+    
+    
+    
+          
+         <div class="grid-12-12">
+          <input type="submit" value="Send" title="Send" class="right">
+         </div>
+     
+  </form>
+  <!-- formee-->
+  </div>
+</div>

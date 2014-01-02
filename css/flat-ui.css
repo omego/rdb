@@ -5355,7 +5355,7 @@ input.search-query {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-
+  font-family: "Lato",sans-serif;
   background: #E9E4E1;
   color: #DD5C56;
 }
@@ -5394,7 +5394,7 @@ input.search-query {
   z-index: 1003;
 }
 .nav-tabs > li > a {
-
+  font-family: "Lato",sans-serif;
   font-weight: 600;
   padding: 7px 21px 8px;
   -webkit-border-radius: 6px 6px 6px 6px;

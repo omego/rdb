@@ -33,7 +33,27 @@ $temp = explode(".", $_FILES["file"]["name"]);
 $extension = end($temp);
 if (empty($_FILES['file']['name']))
 {
-echo "empty file";
+  header('Refresh: 3; url=new_record-2.php');
+  
+  ?>
+  
+  
+
+
+  <div class="clear">
+  
+  </div>
+<div class="msg-col">
+    <div class="msg-logo"><img src="./images/error.png"></div>
+<div class="box-sec" style="text-align:center;">
+    <b><? echo "empty file";?>
+      
+      
+    </b>
+
+</div>
+</div>
+<?
 }
 else {
 if ((($_FILES["file"]["type"] == "image/gif")
@@ -58,10 +78,6 @@ echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
  //else upload the file
 else
 {
-echo "Upload: " . $_FILES["file"]["name"] . "<br>";
-echo "Type: " . $_FILES["file"]["type"] . "<br>";
-echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
-echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
 $newname = date('dmYhms');
 $imagedbtype = $_FILES["file"]["type"];
 $imagedbsize = ($_FILES["file"]["size"] / 1024);
@@ -79,7 +95,6 @@ else
   {
   move_uploaded_file($_FILES["file"]["tmp_name"],
   "upload/" . $newname . "." . $extension);
-  echo "Stored in: " . "upload/" . $newname . "." . $extension;
   $imagepath = "upload/" . $newname . "." . $extension ;
 
   // Data insert lines
@@ -105,15 +120,43 @@ else
     {
     die('Error: ' . mysql_error());
     }
-  echo "<h3 style='text-align:center;'>Your Form Has Been Submitted successfully</h3>";
-  echo "<a href='forms.php'><h3 style='text-align:center;'>Click Here, To see your forms</h3></a>";
+?>
+
+<div class="clear">
+
+</div>
+
+<div class="msg-col">
+    <div class="msg-logo"><img src="./images/success.png"></div>
+<div class="box-sec" style="text-align:center;">
+    <b>Successed!</b>
+
+</div>
+</div>
+
+
+<?
+
+  header('Refresh: 3; url=new_record-2.php');
 
   }
 }
  }
 else
  {
-  echo "Invalid file";
+   ?>
+  <div class="clear">
+  
+  </div>
+  
+  <div class="msg-col">
+      <div class="msg-logo"><img src="./images/error.png"></div>
+  <div class="box-sec" style="text-align:center;">
+      <b>Invalid File!</b>
+  
+  </div>
+  </div>
+  <?
  }
 }
 //////////////////////////////////////////////////////////////////////////////////////// Upload

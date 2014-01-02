@@ -27,7 +27,7 @@ session_start();
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/formee-structure.css" rel="stylesheet">
  	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
-
+<link href="css/search.css" rel="stylesheet">
 	<link rel="shortcut icon" href="images/favicon.ico">
 
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
@@ -48,12 +48,10 @@ session_start();
 ?>
   
  
- <a href="index.php" class="btnx-primary col-3-med">Home</a>
+ <a href="index.php" class="btnx-primary col-3-med">Home</a><div class="clear"></div>
  </div>
   	</div>
-  	<div class="clear">
-		
-	</div>
+
    </div>
    
 

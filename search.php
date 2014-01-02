@@ -34,7 +34,7 @@ if ($tutorial_db->connect_errno) {
 // Define Output HTML Formating
 $html = '';
 $html .= '<li class="result">';
-$html .= '<a target="_blank" href="urlString">';
+$html .= '<a href="urlString">';
 $html .= '<h3>nameString</h3>';
 $html .= '<h4>functionString</h4>';
 $html .= '</a>';
@@ -47,7 +47,7 @@ $search_string = $tutorial_db->real_escape_string($search_string);
 // Check Length More Than One Character
 if (strlen($search_string) >= 1 && $search_string !== ' ') {
 	// Build Query
-	$query = 'SELECT * FROM entry WHERE Saudi_ID LIKE "%'.$search_string.'%" OR Cnum LIKE "%'.$search_string.'%" OR Sure_Name LIKE "%'.$search_string.'%"';
+	$query = 'SELECT * FROM entry WHERE Saudi_ID LIKE "%'.$search_string.'%" OR Cnum LIKE "%'.$search_string.'%" OR Sure_Name LIKE "%'.$search_string.'%" OR First_Name LIKE "%'.$search_string.'%"';
 
 	// Do Search
 	$result = $tutorial_db->query($query);
@@ -79,7 +79,7 @@ if (strlen($search_string) >= 1 && $search_string !== ' ') {
 	}else{
 
 		// Format No Results Output
-		$output = str_replace('urlString', 'javascript:void(0);', $html);
+		$output = str_replace('urlString', '#', $html);
 		$output = str_replace('nameString', '<b>No Results Found.</b>', $output);
 		$output = str_replace('functionString', 'Sorry :(', $output);
 

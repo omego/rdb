@@ -3,8 +3,10 @@ body {
 	font-family: "Lato",sans-serif;
 }
 .header-push{
-	margin: 10px;
-	color: #616161;
+	background: none repeat scroll 0 0 #FEFAF5;
+    border-bottom: 5px solid #F2ECE6;
+    color: #616161;
+    padding: 10px;
 }
 .col-3-med{
 	border-radius: 6px;
@@ -57,7 +59,7 @@ body {
   color: white;
   background-color: #DD5C56;
   text-decoration: none;
-  
+  font-family: "Lato",sans-serif;
 }
 .btnx-primary:hover,
 .btnx-primary:focus{
@@ -139,4 +141,22 @@ body {
 	line-height: 1.53875em;
 	text-align: center;
 
+}
+.msg-col {
+	width: 270px;
+	margin:200px auto;
+}
+.msg-logo {
+	margin: 0 auto 0;
+	width: 152px;
+}
+
+#cnum{
+	background: white url(../images/cnum.png) left no-repeat;
+	padding-left: 35px;
+}
+
+#ept{
+	background: white url(../images/ept.png) right no-repeat;
+	padding-right: 35px;
 }

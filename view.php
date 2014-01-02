@@ -31,7 +31,7 @@ $row = mysql_fetch_array($results);
    <div class="container">
    <div class="box-add">
 
-   <form class="formee" action="insert_record.php" enctype="multipart/form-data" method="post">
+   <form class="formee" action="edit_record.php" enctype="multipart/form-data" method="post">
  		
  		<div class="alert">
  		  
@@ -85,7 +85,7 @@ $row2 = mysql_fetch_array($results2);
  				  </div>
  				  <div class="grid-4-12">
  						  <label>C Number <em class="formee-req">*</em></label>
- 						 <input type="text" name="Cnum" value="<?php echo $row['Cnum'] ?>" />
+ 						 <input type="text" name="Cnum" id="cnum" value="<?php echo $row['Cnum'] ?>" />
  				  </div>
  
  				  <div class="grid-4-12">
@@ -126,7 +126,7 @@ $row2 = mysql_fetch_array($results2);
  
  		  <div class="grid-2-12">
  				  <label>EPT Score <em class="formee-req">*</em></label>
- 				 <input type="text" name="EPT" value="<?php echo $row['EPT'] ?>" />
+ 				 <input type="text" name="EPT" id="ept" value="<?php echo $row['EPT'] ?>" />
  		  </div>
  
  		  <div class="grid-12-12">
@@ -258,7 +258,7 @@ $row2 = mysql_fetch_array($results2);
  		</div>
  
  
- 
+  <input  name="id_id" hidden="hidden" type="text" value="<?php echo $row['id'] ?>">
  
  		 <div class="grid-12-12">
  		  <input type="submit" value="Update" title="Send" class="right">

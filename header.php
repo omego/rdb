@@ -17,9 +17,8 @@ session_start();
 	<link href="css/flat-ui.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/search.css" rel="stylesheet">
-	<link href="css/search-id.css" rel="stylesheet">
-	<link href="css/search-cnum.css" rel="stylesheet">
-	<link href="css/search-family.css" rel="stylesheet">
+
+
 
 	<link rel="shortcut icon" href="images/favicon.ico">
 
@@ -41,9 +40,11 @@ session_start();
 ?>
   
  
- <a href="new_record-2.php" class="btnx-primary col-3-med">Add New</a>
- </div>
-  	</div>
+ <a href="new_record.php" class="btnx-primary col-3-med">Add New</a><div class="clear"></div>
+
+ </div>  	
+  	</div>  	
+
    </div>
    
 
