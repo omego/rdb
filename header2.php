@@ -9,25 +9,11 @@ session_start();
 	<title>RDB Main</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- Loading JS -->
-	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-	<script>
-	$(function() {
-	$( "#datepicker" ).datepicker();
-	});
-	
-	$(function() {
-	$( "#datepicker-2" ).datepicker();
-	});
-	</script>
-
 	<!-- Loading css -->
 	<link href="css/formee-style.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/formee-structure.css" rel="stylesheet">
- 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
-<link href="css/search.css" rel="stylesheet">
+	<link href="css/search.css" rel="stylesheet">
 	<link rel="shortcut icon" href="images/favicon.ico">
 
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->

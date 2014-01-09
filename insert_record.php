@@ -12,9 +12,13 @@ $Sure_Name = $_POST['Sure_Name'];
 $Saudi_ID = $_POST['Saudi_ID'];
 $Cnum = $_POST['Cnum'];
 $Gender = $_POST['Gender'];
-$DOB = $_POST['DOB'];
+$DOB_Day = $_POST['DOB_Day'];
+$DOB_Month = $_POST['DOB_Month'];
+$DOB_Year = $_POST['DOB_Year'];
 $Mobile = $_POST['Mobile'];
-$EPT_Date = $_POST['EPT_Date'];
+$EPT_Date_Day = $_POST['EPT_Date_Day'];
+$EPT_Date_Month = $_POST['EPT_Date_Month'];
+$EPT_Date_Year = $_POST['EPT_Date_Year'];
 $EPT = $_POST['EPT'];
 $Specialty = $_POST['Specialty'];
 $Experience = $_POST['Experience'];
@@ -23,6 +27,10 @@ $Category = $_POST['Category'];
 $GPA = $_POST['GPA'];
 $Status = $_POST['Status'];
 $Comments = $_POST['Comments'];
+
+$Creator = $_POST['Creator'];
+
+$Lastupdate = $_POST['Lastupdate'];
 
 //allowedExts variable is an array consisting of file types that can be supported.we are uploading image so image file extensions are used.
 $allowedExts = array("gif", "jpeg", "jpg", "png", "zip","x-zip","x-zip-compressed","pdf","x-pdf");
@@ -33,7 +41,7 @@ $temp = explode(".", $_FILES["file"]["name"]);
 $extension = end($temp);
 if (empty($_FILES['file']['name']))
 {
-  header('Refresh: 3; url=new_record-2.php');
+  header('Refresh: 3; url=new_record.php');
   
   ?>
   
@@ -56,20 +64,6 @@ if (empty($_FILES['file']['name']))
 <?
 }
 else {
-if ((($_FILES["file"]["type"] == "image/gif")
-|| ($_FILES["file"]["type"] == "image/jpeg")
-|| ($_FILES["file"]["type"] == "image/jpg")
-|| ($_FILES["file"]["type"] == "image/pjpeg")
-|| ($_FILES["file"]["type"] == "image/x-png")
-|| ($_FILES["file"]["type"] == "application/zip")
-|| ($_FILES["file"]["type"] == "application/x-zip")
-|| ($_FILES["file"]["type"] == "application/x-zip-compressed")
-|| ($_FILES["file"]["type"] == "application/pdf")
-|| ($_FILES["file"]["type"] == "application/x-pdf")
-|| ($_FILES["file"]["type"] == "image/png"))
-&& ($_FILES["file"]["size"] < 400000)
-&& in_array($extension, $allowedExts))
- {
  //if any error in file, display it
  if ($_FILES["file"]["error"] > 0)
 {
@@ -105,9 +99,9 @@ else
 
   // Data insert lines
   
-  $sql_2="INSERT INTO entry (First_Name, Father_Name, Sure_Name, Saudi_ID, Cnum, Gender, DOB, Mobile, EPT_Date, EPT, Specialty ,Experience, Category, GPA, Qualifications, Status, Comments, upload_name)
+  $sql_2="INSERT INTO entry (First_Name, Father_Name, Sure_Name, Saudi_ID, Cnum, Gender, DOB_Day, DOB_Month ,DOB_Year, Mobile, EPT_Date_Day, EPT_Date_Month, EPT_Date_Year, EPT, Specialty ,Experience, Category, GPA, Qualifications, Status, Comments, upload_name, Creator, Lastupdate)
   VALUES
-  ('$First_Name','$Father_Name','$Sure_Name','$Saudi_ID','$Cnum','$Gender','$DOB','$Mobile','$EPT_Date','$EPT','$Specialty','$Experience','$Category','$GPA','$Qualifications','$Status','$Comments','$newname')";
+  ('$First_Name','$Father_Name','$Sure_Name','$Saudi_ID','$Cnum','$Gender','$DOB_Day','$DOB_Month','$DOB_Year','$Mobile','$EPT_Date_Day','$EPT_Date_Month','$EPT_Date_Year','$EPT','$Specialty','$Experience','$Category','$GPA','$Qualifications','$Status','$Comments','$newname','$Creator','$Lastupdate')";
   
   
   mysql_query("SET NAMES 'utf8'");
@@ -137,27 +131,16 @@ else
 
 <?
 
-  header('Refresh: 3; url=new_record-2.php');
+  header('Refresh: 3; url=new_record.php');
 
   }
 }
- }
-else
- {
+
+
    ?>
-  <div class="clear">
-  
-  </div>
-  
-  <div class="msg-col">
-      <div class="msg-logo"><img src="./images/error.png"></div>
-  <div class="box-sec" style="text-align:center;">
-      <b>Invalid File!</b>
-  
-  </div>
-  </div>
+
   <?
- }
+
 }
 //////////////////////////////////////////////////////////////////////////////////////// Upload
 

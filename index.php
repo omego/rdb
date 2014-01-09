@@ -6,7 +6,14 @@
              <div class="logo">
                <a href="index.php"><img src="../rdb/images/logo.png"></a>  
              </div>
-             
+             <ul class="nav nav-tabs nav-append-content">
+               <li class="active"><a href="#tab1">All</a></li>
+               <li><a href="#tab2">ID</a></li>
+               <li><a href="#tab3">C#</a></li>
+               <li><a href="#tab4">Family</a></li>
+               
+               <li><a style="margin-left:90px;" href="#tab6">More</a></li>
+             </ul> <!-- /tabs -->
           
           <div class="tab-content">
             <div class="tab-pane active" id="tab1">
@@ -28,15 +35,19 @@
               <? include 'search-family.html';?>
             </div>
             
+            <!-- /tabs -->
+            <div class="tab-pane" id="tab5">
+              <? include 'search-family.html';?>
+            </div>
+            
+            <!-- /tabs -->
+            <div class="tab-pane" id="tab6">
+              <? include 'catagory.php';?>
+            </div>
+            
           </div> <!-- /tab-content -->
              
-             <ul class="nav nav-tabs nav-append-content">
-               <li class="active"><a href="#tab1">All</a></li>
-               <li><a href="#tab2">ID</a></li>
-               <li><a href="#tab3">C#</a></li>
-               <li><a href="#tab4">Family</a></li>
-               <li><a style="margin-left:90px;" href="#tab4">More</a></li>
-             </ul> <!-- /tabs -->
+
            </div>
            
            
