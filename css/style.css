@@ -21,6 +21,9 @@ body {
 	  width: 492px;
 
 }
+.right {
+	float: right;
+}
 .box-add {
 	  margin-top: 0px;
 	  margin: 5% auto;
@@ -166,3 +169,4 @@ body {
 	background: white url(../images/ept.png) right no-repeat;
 	padding-right: 35px;
 }
+

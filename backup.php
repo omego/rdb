@@ -1,21 +1,61 @@
-<?php
-// location of your /temp directory relative to this file. In my case this file is in the same directory.
-$tempDir = "";
-// username for e-commerce MySQL DB
-$user = "root";
-// password for e-commerce MySQL DB
-$password = "root";
-// e-commerce DB name to backup
-$dbName = "rdb";
-// e-commerce DB hostname
-$dbHost = "localhost";
-// e-commerce backup file prefix
-$dbPrefix = "rdb_";
+<?php 
 
-// create backup sql file
-$sqlFile = "run.sql";
-$createBackup = "mysqldump -h ".$dbHost." -u ".$user." --password='".$password."' ".$dbName." > ".$sqlFile;
-exec($createBackup);
+include 'header.php';
+include 'connect.php';
 
-//to backup multiple databases, copy all of the above code for each DB, rename the variables to something unique, and set their values to whatever is appropriate for the different databases.
+$BackupFile = mysql_query("select * from Backup ORDER BY id DESC limit 1");
+
 ?>
+
+   <div class="container">
+      <div class="box-add">
+   
+   		<form class="formee" action="edit_record.php" enctype="multipart/form-data" method="post">
+   
+   		<div class="box-sec">
+   
+   			<?
+   
+   
+   
+   
+   
+   
+   			echo '<table class="table"><thead class="table-head"><tr><th>Backup Date</th><th>Dwonload</th></tr></thead>';
+   
+   			while($row = mysql_fetch_array($BackupFile)){
+   
+   
+   			echo "<tbody class='table-body'><tr><td>" . $row['Backup_date'] . "</td><td><a href='" . $row['Backup_url'] . "'>Download</a></td></tr></tbody>";
+   
+   			}
+   
+   			echo "</table>";
+   
+   
+   
+   			?>
+   
+   
+   
+   	  		</div>
+   
+   	  	</form>
+      </div>
+    </div><!-- formee-->
+
+ 	<!-- Load JS here for greater good =============================-->
+ 	<script src="js/jquery-1.8.3.min.js"></script>
+ 	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+ 	<script src="js/jquery.ui.touch-punch.min.js"></script>
+ 	<script src="js/bootstrap.min.js"></script>
+ 	<script src="js/bootstrap-select.js"></script>
+ 	<script src="js/bootstrap-switch.js"></script>
+ 	<script src="js/flatui-checkbox.js"></script>
+ 	<script src="js/flatui-radio.js"></script>
+ 	<script src="js/jquery.tagsinput.js"></script>
+ 	<script src="js/jquery.placeholder.js"></script>
+ 	<script src="js/jquery.stacktable.js"></script>
+ 	<script src="js/application.js"></script>
+   </body>
+ </html>

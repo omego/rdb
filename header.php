@@ -12,12 +12,15 @@ session_start();
 	<!-- Loading Bootstrap -->
 	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 	<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-
+	
 	<!-- Loading Flat UI -->
 	<link href="css/flat-ui.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/search.css" rel="stylesheet">
+	<link href="css/dropit.css" rel="stylesheet">
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="js/dropit.js"></script>
 
 
 	<link rel="shortcut icon" href="images/favicon.ico">
@@ -34,13 +37,37 @@ session_start();
 
 	  if(isset($_SESSION['username']))
 	  {
-		  // Logged in
-		  echo "<div class='header-push'>";
-		  echo '<div style="float:left;text-align:center;line-height: 0;"><p><span class="fui-gear"></span> Hi <strong>'. $_SESSION['username']. '</strong>, You are awesome today ;) <a href="logout.php">logout</a></p></div>';
-?>
-  
+		  ?>
+
+		<div class='header-push'>
+	<a href="new_record.php" class="btnx-primary col-3-med">Add New</a>
+
  
- <a href="new_record.php" class="btnx-primary col-3-med">Add New</a><div class="clear"></div>
+
+<!-- Single button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+	 <span class="fui-gear"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+	<li><a href="#">Action</a></li>
+	<li><a href="#">Another action</a></li>
+	<li><a href="backup.php">Backup</a></li>
+	<li class="divider"></li>
+	<li><a href="logout.php">logout</a></li>
+  </ul>
+</div>
+
+<div class="btn-group">
+<p> Hi <strong> <? echo $_SESSION['username']; ?></strong>, You are awesome today ;) </p>
+</div>
+
+
+
+ <div class="clear"></div>
+
+
+
 
  </div>  	
   	</div>  	

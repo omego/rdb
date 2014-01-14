@@ -1,28 +1,57 @@
-<?
+<? 
+include 'header.php';
+ ?>
+
+<!doctype html>
+<html>
+	<head>
+		<title>Radar Chart</title>
+		<script src="/rdb/chart/Chart.js"></script>
+		<meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+		<style>
+			canvas{
+			}
+		</style>
+
+	</head>
+	<body>
+		
+		<script>
+			$(document).ready(function() {
+				$('.menu').dropit();
+			});
+		</script>
+		<ul class="menu">
+			<li>
+				<a href="#"><span class="fui-gear"></span></a>
+				<ul>
+					<li><a href="#">Some Action 1</a></li>
+					<li><a href="#">Some Action 2</a></li>
+					<li><a href="#">Some Action 3</a></li>
+					<li><a href="#">Some Action 4</a></li>
+				</ul>
+			</li>
+		</ul>
+		
+		<canvas id="canvas" height="450" width="450"></canvas>
 
 
+	<script>
 
-include 'header2.php';
-include 'connect.php';
+		var pieData = [
+				{
+					value: <? echo $php_var; ?>,
+					color:"#F38630"
+				},
+				{
+					value : <? echo $php_sd; ?>,
+					color : "#E0E4CC"
+				}
 
-$Create_Month = $_POST['Create_Month'];
+			];
 
-$Create_Year = $_POST['Create_Year'];
+	var myPie = new Chart(document.getElementById("canvas").getContext("2d")).Pie(pieData);
 
-$results2 = mysql_query("select * from entry where Create_Month = '". $Create_Month ."' and Create_Year = '". $Create_Year ."'");
-
-$row2 = mysql_fetch_array($results2); 
-
-echo $row2['Cnum'] ;
-
-?>
-
-
-<form action="test.php" method="post">
-	
-	<input name="Create_Month" type="text">
-	
-	<input name="Create_Year" type="text">
-	
-	<p><input type="submit" value="Next"></p>
-</form>
+	</script>
+	</body>
+</html>
